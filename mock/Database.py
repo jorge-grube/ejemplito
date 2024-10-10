@@ -1,24 +1,21 @@
-import pyodbc
+
+import pyodbc  # Asegúrate de tener dos líneas en blanco antes de esta línea
 
 class DatabaseManager:
     @staticmethod
     def connect_to_database():
-        connection_string = (
-            "DRIVER={ODBC Driver 17 for SQL Server};"
-            "SERVER=your_server_name;"
-            "DATABASE=your_database_name;"
-            "UID=your_username;"
-            "PWD=your_password;"
-        )
-        connection = pyodbc.connect(connection_string)
-        return connection
+        """
+        Método estático para simular la conexión a una base de datos.
+        Retorna True si la conexión fue exitosa.
+        """
+        print("Intentando conectar a la base de datos...")
+        return True  # Simulación de una conexión exitosa
 
     @staticmethod
     def execute_query_on_database(query):
-        connection = DatabaseManager.connect_to_database()
-        cursor = connection.cursor()
-        cursor.execute(query)
-        result = cursor.fetchall()
-        connection.close()
-        return result
-
+        """
+        Método estático para simular la ejecución de una consulta SQL.
+        Retorna un resultado simulado.
+        """
+        print(f"Ejecutando la consulta: {query}")
+        return "Resultado esperado"  # Simulación del resultado de la consulta
