@@ -35,6 +35,6 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --config=.flake8 --exit-zero --statistics
     - name: Test with pytest
-      working-directory: ./mock/proyectos
+      working-directory: ./mock
       run: |
         pytest test_database.py
